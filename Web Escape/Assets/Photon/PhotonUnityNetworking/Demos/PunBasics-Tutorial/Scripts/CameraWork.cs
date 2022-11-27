@@ -10,8 +10,8 @@
 
 using UnityEngine;
 
-namespace Photon.Pun.Demo.PunBasics
-{
+//namespace Photon.Pun.Demo.PunBasics
+//{
 	/// <summary>
 	/// Camera work. Follow a target
 	/// </summary>
@@ -127,4 +127,4 @@ namespace Photon.Pun.Demo.PunBasics
 		}
 		#endregion
 	}
-}
+//}
