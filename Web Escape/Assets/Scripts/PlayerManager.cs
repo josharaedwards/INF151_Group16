@@ -20,6 +20,10 @@ public class PlayerManager : MonoBehaviourPunCallbacks, IPunObservable
 
     bool isFiring;
 
+    [Tooltip("The Player's UI GameObject Prefab")]
+    [SerializeField]
+    public GameObject playerUIPrefab;
+
     void Awake()
     {
         if(photonView.IsMine)
@@ -43,9 +47,9 @@ public class PlayerManager : MonoBehaviourPunCallbacks, IPunObservable
     {
         CameraWork _cameraWork = this.gameObject.GetComponent<CameraWork>();
 
-        if(_cameraWork != null)
+        if (_cameraWork != null)
         {
-            if(photonView.IsMine)
+            if (photonView.IsMine)
             {
                 _cameraWork.OnStartFollowing();
             }
@@ -53,6 +57,16 @@ public class PlayerManager : MonoBehaviourPunCallbacks, IPunObservable
         else
         {
             Debug.LogError("<Color=Red><a>Missing</a></Color> CameraWork Component on playerPrefab.", this);
+        }
+
+        if (playerUIPrefab != null)
+        {
+            GameObject _uiGo = Instantiate(this.playerUIPrefab);
+            _uiGo.SendMessage("SetTarget", this, SendMessageOptions.RequireReceiver);
+        }
+        else
+        {
+            Debug.LogWarning("<Color=Red><a>Missing</a></Color> PlayerUiPrefab reference on player Prefab.", this);
         }
     }
    
