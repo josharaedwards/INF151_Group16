@@ -1808,6 +1808,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 1
   beams: {fileID: 344836826}
+  playerUIPrefab: {fileID: 8465051404680150714, guid: b63062cbde3d6a84bb59edf6e5cf6073, type: 3}
 --- !u!114 &3147674861335449464
 MonoBehaviour:
   m_ObjectHideFlags: 0
