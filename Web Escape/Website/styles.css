@@ -1,0 +1,10 @@
+.rec-sq {
+    display:flex;
+    gap: 2em;
+    margin: 2em;
+}
+.rectangle {
+    width: 600px;
+    height: 200px;
+    background: rgb(0, 0, 0);
+}
