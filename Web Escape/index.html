@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>WebEscape</title>
+        <script>
+            function updateParagraphText(){
+                let labelElement = document.getElementByID("label");
+                labelElement.innerText = "Waiting for new game..."
+            }
+        </script>
+    </head>
+    <body>
+        <h1>Web Escape</h1>
+        <p>Web Escape is an online interactive game built for the gaming community
+            in mind. Work in a team or go solo on our fun and exciting adventures. 
+            Your goal is to escape all the rooms in your game to win prizes
+            and money. Use this money to buy weapons, clothing, and more. The more 
+            in your party, the harder the rooms get. If you're every stuck, feel 
+            free to talk to the live chat forum where thousands of gamers
+            are online answering questions about the rooms, giving hints and advice,
+            and talking for fun. The fun is limitless, start your journey now!
+        </p>
+        <button
+        onclick="updateParagraphText();">
+        Play now!
+    </button>
+    </body>
+</html>
